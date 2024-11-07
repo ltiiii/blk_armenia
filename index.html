@@ -3076,9 +3076,9 @@ button:disabled {
         <a class="navbar-mobile__link" data-wba-header-name="Favorites_tabbar" href="https://www.wildberries.ru/lk/favorites" aria-label="Избранные товары" data-link="{on &#39;click&#39; ~showPopupLoginMobile}" data-jsv="#10^/10^#12^/12^">
             <span class="navbar-mobile__icon navbar-mobile__icon--favorites" data-link="class{merge:type == &#39;poned&#39; toggle=&#39;navbar-mobile__icon--active&#39;}"></span>
         </a>
-        <a class="navbar-mobile__link" data-wba-header-name="LK_tabbar" href="https://www.wildberries.ru/lk" aria-label="Личный кабинет" data-link="{on &#39;click&#39; ~showPopupLoginMobile}" data-jsv="#12^/12^#14^/14^">
-            <span class="navbar-mobile__icon navbar-mobile__icon--profile" data-link="class{merge:type == &#39;profile&#39; toggle=&#39;navbar-mobile__icon--active&#39;}class{merge: isPremium toggle=&#39;navbar-mobile__icon--premium&#39;}">
-                <span class="navbar-mobile__notify hide" data-link="{:(eventsModel &amp;&amp; eventsModel^eventsCount)}class{merge:!(router.userIsAuth &amp;&amp; eventsModel &amp;&amp; eventsModel^eventsCount) toggle=&#39;hide&#39;}"></span>
+       <a class="navbar-mobile__link" data-wba-header-name="LK_tabbar" href="/lk" aria-label="Личный кабинет" data-link="{on 'click' ~showPopupLoginMobile}" data-jsv="#12^/12^">
+            <span class="navbar-mobile__icon navbar-mobile__icon--profile" data-link="class{merge:type == 'profile' toggle='navbar-mobile__icon--active'}class{merge: isPremium toggle='navbar-mobile__icon--premium'}">
+                <span class="navbar-mobile__notify" data-link="{:(eventsModel &amp;&amp; eventsModel^eventsCount)}class{merge:!(router.userIsAuth &amp;&amp; eventsModel &amp;&amp; eventsModel^eventsCount) toggle='hide'}">1</span>
             </span>
         </a>
     </div>
