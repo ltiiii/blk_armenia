@@ -1,0 +1,392 @@
+var y=Object.defineProperty;var b=(r,t,e)=>t in r?y(r,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):r[t]=e;var u=(r,t,e)=>(b(r,typeof t!="symbol"?t+"":t,e),e);const g="https://media.gold.razer.com/gold-ui-library/v1.6.0",w=new Date().getFullYear();let n=null;class h extends HTMLElement{constructor(){super(),super.lang=super.getAttribute("lang")||"en",super.region=super.getAttribute("region")||"global",super.isCookieHidden=super.getAttribute("is-cookie-hidden")||"false"}renderFooter(){const t=document.createElement("template");t.innerHTML=`
+      <div class="footer-group">
+        <!-- Header -->
+        <div class="h3 d-none d-md-block">
+          <label class="collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.shop.title"></span>
+          </label>
+        </div>
+        <!-- WAI toggle -->
+        <button role="button" tabindex="0" aria-controls="shop-menu-content"
+          class="h3 d-md-none w-100 bg--transparent border-0 mb-0 btn py-2 px-0 btn-footer-menu"
+          data-footer-menu="shop">
+          <label class="d-flex justify-content-between align-items-center mb-0 collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.shop.title"></span>
+            <a class="text--xl text--secondary link-unstyled footer__collapse-icon rzr-icon-plus"
+              id="shop-menu-collapse-icon"></a>
+          </label>
+        </button>
+        <!-- Content -->
+        <div id="shop-menu" class="footer-list font-base">
+          <ul id="shop-menu-content" class="list-unstyled">
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.razerGold" title="Razer Gold" class="a11y-focus-item" href="https://gold.razer.com/gold/about">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.razerSilverRewards" title="Razer Silver Rewards" class="" href="https://gold.razer.com/silver/about">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.razerStore" title="RazerStores" class="" href="https://www.razer.com/razerstores">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.razerCafe" title="RazerCafe" class="" href="https://www.razer.com/razercafe">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.storeLocator" title="Store Locator" class="" href="https://www.razer.com/store-finder">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.purchasePrograms" title="Purchase Programs" class="" href="https://www.razer.com/store/programs">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.bulkOrderProgram" title="Bulk Order Program" class="" href="https://www.razer.com/store/bulk-purchase">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.education" title="Education" class="" href="https://www.razer.com/education">
+              </a>
+            </li>
+            <li class="py-2 pr-5" data-section-id="only-at-razer" >
+              <a data-translation-id="translations.shop.onlyAtRazer" title="Only at Razer" class="" href="https://www.razer.com/only-at-razer">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.razerStoreRewards" title="RazerStore Rewards" class="" href="https://www.razer.com/store/rewards">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.shop.newsletter" title="Newsletter" class="" href="https://id.razer.com/account/notification-settings">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;const e=document.createElement("template");e.innerHTML=`
+      <div class="footer-group">
+        <!-- Header -->
+        <div class="h3 d-none d-md-block">
+          <label class="collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.explore.title"></span>
+          </label>
+        </div>
+        <!-- WAI toggle -->
+        <button role="button" tabindex="0" aria-controls="explore-menu-content"
+          class="h3 d-md-none w-100 bg--transparent border-0 mb-0 btn py-2 px-0 btn-footer-menu"
+          data-footer-menu="explore">
+          <label class="d-flex justify-content-between align-items-center mb-0 collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.explore.title"></span>
+            <a class="text--xl text--secondary link-unstyled footer__collapse-icon rzr-icon-plus"
+              id="explore-menu-collapse-icon"></a>
+          </label>
+        </button>
+        <!-- Content -->
+        <div id="explore-menu" class="footer-list font-base">
+          <ul id="explore-menu-content" class="list-unstyled">
+            <li class="py-2 pr-5">
+              <a title="Technology" class="" href="https://www.razer.com/technology" data-translation-id="translations.explore.technology">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a title="Chroma RGB" class="" href="https://www.razer.com/chroma" data-translation-id="translations.explore.chromaRgb">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a title="Concepts" class="" href="https://www.razer.com/concepts" data-translation-id="translations.explore.concepts">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a title="Esports" class="" href="https://www.razer.com/esports" data-translation-id="translations.explore.esports">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a title="Collabs" class="" href="https://www.razer.com/lifestyle/collabs" data-translation-id="translations.explore.collabs">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;const s=document.createElement("template");s.innerHTML=`
+      <div class="footer-group">
+        <!-- Header -->
+        <div class="h3 d-none d-md-block">
+          <label class="collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.support.title"></span>
+          </label>
+        </div>
+        <!-- WAI toggle -->
+        <button role="button" tabindex="0" aria-controls="support-menu-content"
+          class="h3 d-md-none w-100 bg--transparent border-0 mb-0 btn py-2 px-0 btn-footer-menu"
+          data-footer-menu="support">
+          <label class="d-flex justify-content-between align-items-center mb-0 collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.support.title"></span>
+            <a class="text--xl text--secondary link-unstyled footer__collapse-icon rzr-icon-plus"
+              id="support-menu-collapse-icon"></a>
+          </label>
+        </button>
+        <!-- Content -->
+        <div id="support-menu" class="footer-list font-base">
+          <ul id="support-menu-content" class="list-unstyled">
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.getHelp" title="Get Help" class="" href="https://gold.razer.com/help?section=0">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.registrationAndWarranty" title="Registration &amp; Warranty" class="" href="https://www.razer.com/product-registration">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.onlineStore" title="Online Store" class="" href="https://www.razer.com/razerstore-support">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.razerCare" title="RazerCare" class="" href="https://www.razer.com/razercare">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.manageRazerid" title="Manage Razer ID" class="" href="https://razerid.razer.com/">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.supportVideos" title="Support Videos" class=""
+                href="https://www.youtube.com/channel/UCrG4K8-XFEK5FyCz_jVzV-A/videos">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.recyclingProgram" title="Recycling Program" class=""
+                href="https://mysupport.razer.com/app/answers/detail/a_id/5904">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.support.accessibilityStatement" title="Accessibility Statement" class=""
+                href="https://www.razer.com/legal/commitment-to-accessibility">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;const a=document.createElement("template");a.innerHTML=`
+      <div class="footer-group">
+        <!-- Header -->
+        <div class="h3 d-none d-md-block">
+          <label class="collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.company.title"></span>
+          </label>
+        </div>
+        <!-- WAI toggle -->
+        <button role="button" tabindex="0" aria-controls="company-menu-content"
+          class="h3 d-md-none w-100 bg--transparent border-0 mb-0 btn py-2 px-0 btn-footer-menu"
+          data-footer-menu="company">
+          <label class="d-flex justify-content-between align-items-center mb-0 collapse-heading">
+            <span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.company.title"></span>
+            <a class="text--xl text--secondary link-unstyled footer__collapse-icon rzr-icon-plus"
+              id="company-menu-collapse-icon"></a>
+          </label>
+        </button>
+        <!-- Content -->
+        <div id="company-menu" class="footer-list font-base">
+          <ul id="company-menu-content" class="list-unstyled">
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.company.aboutUs" title="About Us" class="" href="https://www.razer.com/about-razer">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.company.careers" title="Careers" class="" href="https://careers.razer.com/">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.company.pressRoom" title="Newsroom" class="" href="https://press.razer.com/">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.company.ventures" title="zVentures" class="" href="https://www.zvntrs.com/">
+              </a>
+            </li>
+            <li class="py-2 pr-5">
+              <a data-translation-id="translations.company.contactUs" title="Contact Us" class="" href="https://www.razer.com/contact-us">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;const l=document.createElement("template");l.innerHTML=`
+      <div class="footer-group d-none d-md-block">
+        <div class="h3 d-none d-md-block">
+          <label class="collapse-heading"><span role="heading" aria-level="2" class="collapse-title" data-translation-id="translations.followUs.title">
+          </span></label>
+        </div>
+        <div class="social-media-icons-list font-base">
+          <ul class="list-unstyled">
+            <li class="py-2">
+              <a href="https://www.facebook.com/razer" title="Facebook" aria-label="Facebook"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-facebook-grey.svg"
+                  alt="Facebook" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://www.instagram.com/razer" title="Instagram" aria-label="Instagram"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-instagram-grey.svg"
+                  alt="Instagram" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://www.threads.net/@razer" title="Threads" aria-label="Threads"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-threads-grey.svg"
+                  alt="Threads" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://x.com/Razer" title="X" aria-label="X"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-twitter-grey.svg"
+                  alt="X" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://www.youtube.com/razer" title="YouTube" aria-label="YouTube"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-youtube-grey.svg"
+                  alt="YouTube" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://www.tiktok.com/@razer" title="TikTok" aria-label="TikTok"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-tiktok-grey.svg"
+                  alt="TikTok" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://www.twitch.tv/razer" title="twitch" aria-label="twitch"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-twitch-grey.svg"
+                  alt="twitch" width="28" height="28" class="" /></a>
+            </li>
+            <li class="py-2">
+              <a href="https://discord.com/invite/razer" title="Discord" aria-label="Discord"><img
+                  src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-discord-grey.svg"
+                  alt="Discord" width="28" height="28" class="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `;const o=document.createElement("template");o.innerHTML=`
+      <div class="order-2 order-md-1 col-md-3 col-12">
+        <div class="row">
+          <div class="footer__slogan text-center text-md-right col">
+            <div class="text--brand h4 mb-0">FOR GAMERS. BY GAMERS.™</div>
+          </div>
+        </div>
+      </div>
+    `;const i=document.createElement("template");i.innerHTML=`
+      <li>
+        <a data-translation-id="translations.termsOfService" href="https://gold.razer.com/legal/" class="cta--no-underline cta--secondary mb-1 d-inline-block"
+          aria-label="">
+        </a>
+        <span class="mx-3">|</span>
+      </li>
+    `;const c=document.createElement("template");c.innerHTML=`
+      <li>
+        <a data-translation-id="translations.legalTerms" href="https://www.razer.com/legal/" rel="noopener" target="_blank"
+          class="cta--no-underline cta--secondary mb-1 d-inline-block"></a>
+        <span class="mx-3">|</span>
+      </li>
+    `;const d=document.createElement("template");d.innerHTML=`
+      <li>
+        <a data-translation-id="translations.privacyPolicy" href="https://www.razer.com/legal/customer-privacy-policy" rel="noopener" target="_blank"
+          class="cta--no-underline cta--secondary mb-1 d-inline-block"></a>
+      </li>
+    `;const p=document.createElement("template");p.innerHTML=`
+      <li data-section-id="cookie-settings">
+        <span class="mx-3">|</span>
+          <button data-translation-id="translations.cookieSettings" type="button"
+            class="text--secondary mb-1 d-inline-block cookie-settings-button ot-floating-button__open">
+          </button>
+        </li>
+      `;const m=document.createElement("template");m.innerHTML=`
+      <li data-section-id="specific-commercial-transactions" >
+        <a data-translation-id="translations.specificCommercialTransactions" class="cta--no-underline cta--secondary mb-1 d-inline-block" href="https://gold.razer.com/legal/specific-commercial-transactions-japan" rel="noopener" target="_blank"></a>
+        <span class="mx-3">|</span>
+      </li>
+    `,super.innerHTML=`
+    <footer class="footer pt-5">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-md-9 col-12">
+            <div class="d-flex justify-content-md-start flex-wrap">
+              ${t.innerHTML}
+              ${e.innerHTML}
+              ${s.innerHTML}
+              ${a.innerHTML}
+              ${l.innerHTML}
+            </div>
+          </div>
+          <!-- FGBG -->
+          ${o.innerHTML}
+          <!-- Copyright -->
+          <div class="order-1 order-md-2 my-4 col-12">
+            <div class="row footer-copyright text--sm d-flex justify-content-space-between">
+              <div class="d-none d-md-block col-12">
+                <hr />
+              </div>
+              <div class="text-center text-lg-left py-3 col-sm-12 col-lg-4">
+                <span data-translation-id="translations.copyright"></span>
+              </div>
+              <div class="py-3 d-inline-flex justify-content-center justify-content-lg-end col-sm-12 col-lg-8">
+                
+                <ul class="p-0 m-0 list-unstyled d-flex justify-content-center flex-wrap">
+                ${i.innerHTML}
+                ${m.innerHTML}
+                ${c.innerHTML}
+                ${d.innerHTML}
+                ${p.innerHTML}
+                </ul>
+              </div>
+              <div class="d-md-none col-12">
+                <hr />
+              </div>
+            </div>
+          </div>
+          <!-- Follow Us (Mobile) -->
+          <div class="order-last pt-2 d-md-none col">
+            <div class="social-media-icons-list font-base">
+              <ul class="list-unstyled d-flex justify-content-center">
+                <li class="px-1">
+                  <a href="https://www.facebook.com/razer" title="Facebook" aria-label="Facebook"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-facebook-grey.svg"
+                      alt="Facebook" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://www.instagram.com/razer" title="Instagram" aria-label="Instagram"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-instagram-grey.svg"
+                      alt="Instagram" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://www.twitter.com/Razer" title="Twitter" aria-label="Twitter"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-twitter-grey.svg"
+                      alt="Twitter" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://www.youtube.com/razer" title="YouTube" aria-label="YouTube"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-youtube-grey.svg"
+                      alt="YouTube" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://www.tiktok.com/@razer" title="TikTok" aria-label="TikTok"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-tiktok-grey.svg"
+                      alt="TikTok" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://www.twitch.tv/razer" title="twitch" aria-label="twitch"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-twitch-grey.svg"
+                      alt="twitch" width="28" height="28" class="" /></a>
+                </li>
+                <li class="px-1">
+                  <a href="https://discord.com/invite/razer" title="Discord" aria-label="Discord"><img
+                      src="https://media.gold.razer.com/goldweb/assets/images/icons/social-media-icon-discord-grey.svg"
+                      alt="Discord" width="28" height="28" class="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    `}bindClickEvent(){const t=this;Array.from(t.querySelectorAll(".btn-footer-menu")).forEach(s=>{s.addEventListener("click",a=>{const l=a.target,o=l.getAttribute("data-footer-menu")?l.getAttribute("data-footer-menu"):l.closest("button").getAttribute("data-footer-menu");document.getElementById(`${o}-menu`).classList.contains("active")?(document.getElementById(`${o}-menu`).classList.remove("active"),document.getElementById(`${o}-menu-collapse-icon`).classList.remove("rzr-icon-cross"),document.getElementById(`${o}-menu-collapse-icon`).classList.add("rzr-icon-plus")):(document.getElementById(`${o}-menu`).classList.add("active"),document.getElementById(`${o}-menu-collapse-icon`).classList.add("rzr-icon-cross"),document.getElementById(`${o}-menu-collapse-icon`).classList.remove("rzr-icon-plus"))})})}applyTranslations(t){const e={"translations.shop.title":t.shop.title,"translations.shop.razerGold":t.shop.razerGold,"translations.shop.razerSilverRewards":t.shop.razerSilverRewards,"translations.shop.razerStore":t.shop.razerStore,"translations.shop.razerCafe":t.shop.razerCafe,"translations.shop.storeLocator":t.shop.storeLocator,"translations.shop.purchasePrograms":t.shop.purchasePrograms,"translations.shop.bulkOrderProgram":t.shop.bulkOrderProgram,"translations.shop.education":t.shop.education,"translations.shop.onlyAtRazer":t.shop.onlyAtRazer,"translations.shop.razerStoreRewards":t.shop.razerStoreRewards,"translations.shop.newsletter":t.shop.newsletter,"translations.explore.title":t.explore.title,"translations.explore.technology":t.explore.technology,"translations.explore.chromaRgb":t.explore.chromaRgb,"translations.explore.concepts":t.explore.concepts,"translations.explore.esports":t.explore.esports,"translations.explore.collabs":t.explore.collabs,"translations.support.title":t.support.title,"translations.support.getHelp":t.support.getHelp,"translations.support.registrationAndWarranty":t.support.registrationAndWarranty,"translations.support.onlineStore":t.support.onlineStore,"translations.support.razerCare":t.support.razerCare,"translations.support.manageRazerid":t.support.manageRazerid,"translations.support.supportVideos":t.support.supportVideos,"translations.support.recyclingProgram":t.support.recyclingProgram,"translations.support.accessibilityStatement":t.support.accessibilityStatement,"translations.company.title":t.company.title,"translations.company.aboutUs":t.company.aboutUs,"translations.company.careers":t.company.careers,"translations.company.pressRoom":t.company.pressRoom,"translations.company.ventures":t.company.ventures,"translations.company.contactUs":t.company.contactUs,"translations.followUs.title":t.followUs.title,"translations.termsOfService":t.termsOfService,"translations.legalTerms":t.legalTerms,"translations.privacyPolicy":t.privacyPolicy,"translations.cookieSettings":t.cookieSettings,"translations.copyright":t.copyright,"translations.specificCommercialTransactions":t.specificCommercialTransactions};for(const s in e){const a=document.querySelectorAll(`[data-translation-id="${s}"]`);if(a)for(const l of a){let o=e[s];s==="translations.copyright"&&(o=o.replace(/%s/g,w)),l.innerHTML=o}}}async loadTranslations(t,e,s){const a=this;if(t)try{const o=await(await fetch(`${g}/translations/${t}/footer.json`)).json();a.applyTranslations(o)}catch(l){a.language="en",console.error(`Failed to load translations for language ${t}:`,l)}}async displayExclusiveContentByRegion(t,e,s){const a=this;if(["au","ca","eu","hk","in","id","jp","my","mm","nz","pk","ph","sg","kr","tw","th","us","vn"].includes(e)){const o=document.querySelector('[data-section-id="only-at-razer"]');o.classList.remove("d-none");try{(s||n===null)&&(n=await(await fetch(`${g}/data/footerExclusiveRegionLinks.json`)).json()),o.querySelector('[data-translation-id="translations.shop.onlyAtRazer"]').setAttribute("href",n.onlyAtRazer[e][t]||"https://www.razer.com/only-at-razer")}catch(i){console.error(`Failed to load only at razer link for ${e}`,i)}}else document.querySelector('[data-section-id="only-at-razer"]').classList.add("d-none");e==="jp"?document.querySelector('[data-section-id="specific-commercial-transactions"]').classList.remove("d-none"):document.querySelector('[data-section-id="specific-commercial-transactions"]').classList.add("d-none"),a.isCookieHidden==="true"?document.querySelector('[data-section-id="cookie-settings"]').classList.add("d-none"):document.querySelector('[data-section-id="cookie-settings"]').classList.remove("d-none")}waitForElement(t){return new Promise(e=>{if(document.querySelector(t))return e(document.querySelector(t));const s=new MutationObserver(a=>{document.querySelector(t)&&(s.disconnect(),e(document.querySelector(t)))});s.observe(document.body,{childList:!0,subtree:!0})})}attributeChangedCallback(t,e,s){const a=this;if(document.querySelectorAll(".footer")){if(t==="region"&&e!==s&&(a.region=s),t==="lang"&&e!==s&&(a.language=s,a.dir=a.language==="ar"?"rtl":"ltr"),e===null)return;(t==="region"||t==="lang")&&(a.loadTranslations(a.language,a.region),a.displayExclusiveContentByRegion(a.language,a.region))}}connectedCallback(){const t=this;t.renderFooter(),t.waitForElement(".footer").then(e=>{e&&(t.bindClickEvent(),t.loadTranslations(t.language,t.region,!0),t.displayExclusiveContentByRegion(t.language,t.region,!0),self.isCookieHidden||t.appendOneTrustScript(),t.appendGtmScript())})}appendOneTrustScript(){let t=document.createElement("script");t.setAttribute("src","https://cdn-apac.onetrust.com/consent/6f9a4656-5252-48ca-b960-2134761d3130/OtAutoBlock.js"),document.head.appendChild(t);let e=document.createElement("script");e.setAttribute("src","https://cdn-apac.onetrust.com/scripttemplates/otSDKStub.js"),e.setAttribute("charset","UTF-8"),e.setAttribute("data-domain-script","6f9a4656-5252-48ca-b960-2134761d3130"),document.head.appendChild(e)}appendGtmScript(){let t=document.createElement("script");t.innerHTML=`(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.setAttributeNode(d.createAttribute('data-ot-ignore'));
+    j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-WLBG4NH')`,document.head.appendChild(t)}}u(h,"observedAttributes",["lang","region","is-cookie-hidden"]);customElements.define("wc-gold-footer",h);
