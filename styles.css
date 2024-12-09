@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin-right: 40px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  nav ul li a:hover {
+    color: #f1f1f1;
+  }
+  
+  section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-gallery {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .photo-gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .photo-gallery img:hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  ul li {
+    margin: 10px 0;
+  }
+  
+  ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  ul li a:hover {
+    color: #888;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Анимации */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .fade-in:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .fade-in:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .fade-in:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Анимация для изображений */
+  .img-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .img-animation:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  .img-animation:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .img-animation:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    .photo-gallery {
+      flex-direction: column;
+    }
+    .about-image img {
+      max-width: 100%;
+    }
+  }
+  
+  .ticker-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff; /* Фон контейнера */
+  }
+  
+  .ticker-tape {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scrollTicker 20s linear infinite;
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .logo-bar__image {
+    width: 150px; /* Ширина логотипа */
+    height: 150px; /* Высота логотипа */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo-bar__image:hover {
+    transform: scale(1.1); /* Увеличение логотипа при наведении */
+  }
+  
+  /* Анимация прокрутки логотипов */
+  @keyframes scrollTicker {
+    0% {
+      transform: translateX(100); /* Начало прокрутки с левого края */
+    }
+    100% {
+      transform: translateX(-100%); /* Перемещаем все логотипы влево */
+    }
+  }
+  
+  .ticker-tape {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    animation: scrollTicker 70s linear infinite;
+  }
+  
+  /* Копируем все логотипы */
+  .ticker-tape .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .ticker-tape .slide img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  
+  .blk-earth-section {
+    background-image: url('https://shop.getblk.com/cdn/shop/files/production_ID_4441066_2_1b925992-4316-4694-af69-cedd0175d7ac.png?v=1678271501&width=1920');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .blk-earth-text {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .blk-earth-text h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .blk-earth-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Скрыта на ПК */
+}
+
+/* Стиль меню */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #888;
+}
+
+/* Мобильный стиль */
+@media (max-width: 768px) {
+  /* Общий стиль для всех устройств */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+  .menu-button {
+    display: block; /* Показываем кнопку на мобильных */
+  }
+
+  nav {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav.open {
+    max-height: 500px; /* Достаточно большое значение, чтобы вместить весь контент */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+  .photo-gallery img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+.photo-gallery {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+   }
+}
+  
